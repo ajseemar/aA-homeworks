@@ -15,19 +15,3 @@ class Stack
         @stack[-1]
     end
 end
-
-s = Stack.new
-
-(1..10).each { |i| s.push(i) }
-
-puts s.peek
-s.pop
-
-puts s.peek
-s.pop
-
-puts s.peek
-s.pop
-
-puts s.peek
-s.pop
