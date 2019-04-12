@@ -38,19 +38,12 @@ Elephant.paradeHelper = function(e) {
 };
 
 
-function dinerBreakfast(ord = null) {
-    let order = ["I'd like cheesy scrambled eggs"];
-    if(ord) {
-        order.push(ord);
-        str = order.join(" and ")
-        return () => str + "please."
-    } else {
-        str = order.join(" and ")
-        return () => str + `${order.length === 1 ? " " : ""}please.`
+function dinerBreakfast() {
+    let order = "I'd like cheesy scrambled eggs please.";
+    console.log(order);
+    
+    return (food) => {
+        order = `${order.slice(0, order.length - 8)} and ${food} please.`;
+        console.log(order);
     }
 }
-
-// let bfastOrder = dinerBreakfast();
-// console.log(bfastOrder());
-// bfastOrder("chocolate chip pancakes");
-// console.log(bfastOrder());
